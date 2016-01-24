@@ -58,20 +58,6 @@ module.exports = class NodejsGenerator extends yeoman.Base {
               })
           },
       },
-      {
-        type: 'input',
-        name: 'githubName',
-        message: 'Your github username',
-        default: (config.github && config.github.user) || '',
-      },
-      {
-        type: 'input',
-        name: 'author',
-        message: 'Author name',
-        default:
-          ((config.user && config.user.name) || '') +
-          (' <' + ((config.user && config.user.email) || '') + '>'),
-      },
     ]
 
     this.prompt(prompts, function(props) {
@@ -79,9 +65,8 @@ module.exports = class NodejsGenerator extends yeoman.Base {
       this.moduleVarName = camelCase(props.moduleName)
       this.moduleDesc = props.moduleDesc
       this.keywords = props.keywords
-      this.githubName = props.githubName
-      this.author = props.author
-      this.copyrightName = props.author.replace(/<[^>]*?>/gm, '').trim()
+      this.githubName = 'zkochan'
+      this.author = 'Zoltan Kochan'
 
       this.dequote = function(str) {
         return str.replace(/\"/gm, '\\"')
