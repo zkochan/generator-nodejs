@@ -1,28 +1,28 @@
-# generator-nodejs
+# generator-zo
 
 A node.js module scaffolding generator for [Yeoman](http://yeoman.io).
 
-[![Build Status](https://secure.travis-ci.org/eugeneware/generator-nodejs.png?branch=master)](https://travis-ci.org/eugeneware/generator-nodejs)
+[![Build Status](https://secure.travis-ci.org/zkochan/generator-zo.png?branch=master)](https://travis-ci.org/zkochan/generator-zo)
 
 ### Installation
 
-To install generator-nodejs from npm, run:
+To install generator-zo from npm, run:
 
 ```
-$ npm install -g generator-nodejs
+$ npm install -g generator-zo
 ```
 
 Finally, initiate the generator:
 
 ```
-$ yo nodejs
+$ yo zo
 ```
 
-![generator-nodejs screenshot](https://raw.github.com/eugeneware/generator-nodejs/gh-pages/generator.gif)
+![generator-zo screenshot](https://raw.github.com/zkochan/generator-zo/gh-pages/generator.gif)
 
 This generator now supports [tape](https://github.com/substack/tape),
 [mocha](https://github.com/visionmedia/mocha), and
-[redtape](https://github.com/eugeneware/redtape) as test frameworks.
+[redtape](https://github.com/zkochan/redtape) as test frameworks.
 
 It also supports [expect.js](https://github.com/learnboost/expect.js),
 [chai](https://github.com/chaijs/chai) and 'none' for assertion libraries for
@@ -48,4 +48,3 @@ This generator will install the following files:
 * index.js - Initial library file
 * test/index.js - First unit test in the test framework of your choosing
   (ie. mocha, tape, or redtape)
-
