@@ -27,6 +27,7 @@
   "bugs": {
     "url": "https://github.com/<%- githubName %>/<%- moduleName %>/issues"
   },
+  "homepage": "https://github.com/<%- githubName %>/<%- moduleName %>#readme",
   "dependencies": {},
   "devDependencies": {
     "chai": "^3.4.1",
