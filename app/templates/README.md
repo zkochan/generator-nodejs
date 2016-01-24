@@ -2,7 +2,11 @@
 
 <%- moduleDesc %>
 
-[![build status](https://secure.travis-ci.org/<%- githubName %>/<%- moduleName %>.png)](http://travis-ci.org/<%- githubName %>/<%- moduleName %>)
+[![Dependency Status](https://david-dm.org/<%- githubName %>/<%- moduleName %>/status.svg?style=flat)](https://david-dm.org/<%- githubName %>/<%- moduleName %>)
+[![Build Status](https://travis-ci.org/<%- githubName %>/<%- moduleName %>.svg?branch=master)](https://travis-ci.org/<%- githubName %>/<%- moduleName %>)
+[![npm version](https://badge.fury.io/js/<%- moduleName %>.svg)](http://badge.fury.io/js/<%- moduleName %>)
+[![Coverage Status](https://coveralls.io/repos/<%- githubName %>/<%- moduleName %>/badge.svg?branch=master&service=github)](https://coveralls.io/github/<%- githubName %>/<%- moduleName %>?branch=master)
+
 
 ## Installation
 
@@ -12,8 +16,14 @@ This module is installed via npm:
 $ npm install <%- moduleName %>
 ```
 
+
 ## Example Usage
 
 ``` js
-var <%- moduleVarName %> = require('<%- moduleName %>');
+const <%- moduleVarName %> = require('<%- moduleName %>')
 ```
+
+
+## License
+
+MIT
