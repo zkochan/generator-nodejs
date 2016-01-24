@@ -59,26 +59,6 @@ module.exports = class NodejsGenerator extends yeoman.Base {
           },
       },
       {
-        type: 'confirm',
-        name: 'useGrunt',
-        message: 'Use grunt?',
-        default: true,
-      },
-      {
-        type: 'list',
-        name: 'testFramework',
-        message: 'Testing framework',
-        choices: ['mocha', 'tape', 'redtape'],
-        default: 'mocha',
-      },
-      {
-        type: 'list',
-        name: 'assertionLibrary',
-        message: 'Assertion Library',
-        choices: ['expect.js', 'chai', 'none'],
-        default: 'expect.js',
-      },
-      {
         type: 'input',
         name: 'githubName',
         message: 'Your github username',
@@ -102,9 +82,6 @@ module.exports = class NodejsGenerator extends yeoman.Base {
       this.githubName = props.githubName
       this.author = props.author
       this.copyrightName = props.author.replace(/<[^>]*?>/gm, '').trim()
-      this.testFramework = props.testFramework
-      this.assertionLibrary = props.assertionLibrary
-      this.useGrunt = props.useGrunt
 
       this.dequote = function(str) {
         return str.replace(/\"/gm, '\\"')
@@ -117,10 +94,7 @@ module.exports = class NodejsGenerator extends yeoman.Base {
   build() {
     this.template('_package.json', 'package.json')
 
-    if (this.useGrunt) {
-      this.template('Gruntfile.js', 'Gruntfile.js')
-      this.copy('jshintrc', '.jshintrc')
-    }
+    this.copy('jshintrc', '.jshintrc')
     this.copy('travis.yml', '.travis.yml')
     this.copy('gitignore', '.gitignore')
     this.copy('LICENSE', 'LICENSE')
@@ -131,22 +105,6 @@ module.exports = class NodejsGenerator extends yeoman.Base {
     mkdirp('test')
     mkdirp('test/fixtures')
     this.copy('lib.js', 'index.js')
-
-    switch (this.testFramework) {
-      case 'mocha':
-        this.template('test.js', 'test/index.js')
-        break
-
-      case 'tape':
-        this.template('test-tape.js', 'test/index.js')
-        break
-
-      case 'redtape':
-        this.template('test-redtape.js', 'test/index.js')
-        break
-
-      default:
-        break
-    }
+    this.template('test.js', 'test/index.js')
   }
 }
