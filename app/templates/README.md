@@ -10,14 +10,12 @@
 
 ## Installation
 
-This module is installed via npm:
-
-``` bash
-$ npm install <%- moduleName %>
+``` sh
+$ npm i <%- moduleName %>
 ```
 
 
-## Example Usage
+## Usage
 
 ``` js
 const <%- moduleVarName %> = require('<%- moduleName %>')
@@ -26,4 +24,4 @@ const <%- moduleVarName %> = require('<%- moduleName %>')
 
 ## License
 
-MIT
+MIT © [Zoltan Kochan](https://github.com/zkochan)
