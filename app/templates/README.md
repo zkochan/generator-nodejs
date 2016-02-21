@@ -10,8 +10,8 @@
 
 ## Installation
 
-``` sh
-$ npm i <%- moduleName %>
+```
+npm i <%- moduleName %>
 ```
 
 
@@ -24,4 +24,4 @@ const <%- moduleVarName %> = require('<%- moduleName %>')
 
 ## License
 
-MIT © [Zoltan Kochan](https://github.com/zkochan)
+MIT © [Zoltan Kochan](https://www.kochan.io)
