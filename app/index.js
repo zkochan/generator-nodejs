@@ -79,8 +79,8 @@ module.exports = class NodejsGenerator extends yeoman.Base {
   build() {
     this.template('_package.json', 'package.json')
 
-    this.copy('jshintrc', '.jshintrc')
-    this.copy('jscsrc', '.jscsrc')
+    this.copy('eslintrc', '.eslintrc')
+    this.copy('gitattributes', '.gitattributes')
     this.copy('travis.yml', '.travis.yml')
     this.copy('gitignore', '.gitignore')
     this.copy('LICENSE', 'LICENSE')
@@ -90,6 +90,6 @@ module.exports = class NodejsGenerator extends yeoman.Base {
   testFrameworks() {
     mkdirp('test')
     this.copy('lib.js', 'index.js')
-    this.template('test.js', 'test/index.js')
+    this.template('mocha.opts', 'test/mocha.opts')
   }
 }
